@@ -3,9 +3,9 @@ entries:
   phonebook:
     - apiVersion: v2
       appVersion: 0.3.7
-      created: '2024-11-08T10:09:40.521115-05:00'
+      created: '2024-11-08T10:10:57.079253-05:00'
       description: Manages DNS Record within Kubernetes
-      digest: 59841e2800471ad424b37437492b91c5e4e02941cff209985d650ff7b143e14e
+      digest: 8e00c2965101f11fd9cc19bc2ccc9f325f1d7e032b07549921e51f1670e48f62
       name: phonebook
       type: application
       urls:
