@@ -17,6 +17,7 @@ jobs:
       - name: Generate new version
         uses: pier-oliviert/actions@latest
         with:
+          entrypoint: bun run index.ts
           args: create version
           auth_token: "${{ secrets.GITHUB_TOKEN }}"
           repo: "$${{ github.repository}}"
@@ -35,6 +36,7 @@ jobs:
       - name: Generate Changelog
         uses: pier-oliviert/actions@latest
         with:
+          entrypoint: bun run index.ts
           args: create changelogs
           auth_token: "${{ secrets.GITHUB_TOKEN }}"
           repo: "$${{ github.repository}}"
@@ -53,6 +55,7 @@ jobs:
       - name: Deploy Helm package
         uses: pier-oliviert/actions@latest
         with:
+          entrypoint: bun run index.ts
           args: create release
           auth_token: "${{ secrets.GITHUB_TOKEN }}"
           repo: "$${{ github.repository}}"
@@ -71,6 +74,7 @@ jobs:
       - name: Deploy Helm package
         uses: pier-oliviert/actions@latest
         with:
+          entrypoint: bun run index.ts
           args: create changelogs
           auth_token: "${{ secrets.GITHUB_TOKEN }}"
           repo: "$${{ github.repository}}"
