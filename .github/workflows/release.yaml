@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Generate new version
-        uses: pier-oliviert/actions
+        uses: pier-oliviert/actions@latest
         with:
           args: create version
           auth_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -33,7 +33,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Generate Changelog
-        uses: pier-oliviert/actions
+        uses: pier-oliviert/actions@latest
         with:
           args: create changelogs
           auth_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -51,7 +51,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Deploy Helm package
-        uses: pier-oliviert/actions
+        uses: pier-oliviert/actions@latest
         with:
           args: create release
           auth_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -69,7 +69,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Deploy Helm package
-        uses: pier-oliviert/actions
+        uses: pier-oliviert/actions@latest
         with:
           args: create changelogs
           auth_token: "${{ secrets.GITHUB_TOKEN }}"
