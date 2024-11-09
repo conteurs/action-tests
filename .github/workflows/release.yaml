@@ -14,11 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
       - name: Generate new version
-        uses: pier-oliviert/actions@04e2ddd3934755a4b371b4c7794e44228cceda33
+        uses: pier-oliviert/actions@v0
         with:
           entrypoint: bun run index.ts
           args: create version
@@ -36,11 +33,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
       - name: Generate Changelog
-        uses: pier-oliviert/actions@04e2ddd3934755a4b371b4c7794e44228cceda33
+        uses: pier-oliviert/actions@v0
         with:
           entrypoint: bun run index.ts
           args: create changelogs
@@ -58,11 +52,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
       - name: Deploy Helm package
-        uses: pier-oliviert/actions@04e2ddd3934755a4b371b4c7794e44228cceda33
+        uses: pier-oliviert/actions@v0
         with:
           entrypoint: bun run index.ts
           args: create release
@@ -80,11 +71,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
       - name: Deploy Helm package
-        uses: pier-oliviert/actions@04e2ddd3934755a4b371b4c7794e44228cceda33
+        uses: pier-oliviert/actions@v0
         with:
           entrypoint: bun run index.ts
           args: create changelogs
